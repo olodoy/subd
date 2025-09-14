@@ -39,6 +39,7 @@
 	"last_name" TEXT NOT NULL
 	"role" INTEGER NOT NULL REFERENCES "user_role"("id")
 	"aviary" INTEGER NOT NULL REFERENCES "aviary"("id")
+	"review" INTEGER NOT NULL REFERENCES "review"("id")
 10.user_role
 	"id" INTEGER PRIMARY KEY
 	"role" TEXT
