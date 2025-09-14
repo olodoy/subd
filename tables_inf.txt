@@ -1,0 +1,59 @@
+1.animal
+	"id" INTEGER PRIMARY KEY
+	"name" TEXT NOT NULL
+	"aviary" INTEGER NOT NULL REFERENCES "aviary"("id")
+	"diet"	INTEGER NOT NULL REFERENCES "diet"("id")
+	"species" INTEGER NOT NULL REFERENCES "species"("id")	
+2.aviary
+	"area" INTEGER NOT NULL
+	"id" INTEGER PRIMARY KEY
+3.diet
+	"id" INTEGER PRIMARY KEY
+	"food" TEXT NOT NUL
+	"amount" INTEGER NOT NULL
+4.medicine
+
+	"id" INTEGER PRIMARY KEY
+	"amount" INTEGER
+	"name" TEXT NOT NULL
+5.review
+	"id" INTEGER PRIMARY KEY
+	"text" TEXT NOT NULL
+	"author" INTEGER NOT NULL UNIQUE REFERENCES "user"("id")
+6.species
+	"id" INTEGER PRIMARY KEY
+	"common_name" TEXT NOT NULL
+	"scientific_name" TEXT NOT NULL
+7.supplier
+	"id" INTEGER PRIMARY KEY
+	"name" TEXT NOT NULL
+	"amount" INTEGER NOT NULL
+	"product" TEXT NOT NULL
+8.ticket
+	"id" INTEGER PRIMARY KEY
+	"type" TEXT NOT NULL UNIQUE
+	"price" INTEGER NOT NULL
+9.user
+	"id" INTEGER PRIMARY KEY
+	"first_name" TEXT NOT NULL
+	"last_name" TEXT NOT NULL
+	"role" INTEGER NOT NULL REFERENCES "user_role"("id")
+	"aviary" INTEGER NOT NULL REFERENCES "aviary"("id")
+10.user_role
+	"id" INTEGER PRIMARY KEY
+	"role" TEXT
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+
+
